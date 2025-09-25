@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compare Shops - Trim & Glow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-padding">
+
+  <div class="page-header">
+    <h3>Compare Selected Shops</h3>
+    <div class="header-actions">
+      <a href="index.html" class="btn secondary">Back to Map</a>
+      <button id="clearCompare" class="btn danger">Clear All</button>
+    </div>
+  </div>
+
+  <div id="compareGrid" class="grid"></div>
+
+  <script>
+    const API = 'http://localhost:3000/shops';
+    const compareGrid = document.getElementById('compareGrid');
+
+    async function loadCompare() {
+      const favIds = JSON.parse(localStorage.getItem('kc_favs') || '[]');
+      if (!favIds.length) {
+        compareGrid.innerHTML = '<div class="alert">No favorites saved. Add shops from the map.</div>';
+        return;
+      }
+
+      const resp = await fetch(API);
+      const shops = await resp.json();
+      const selected = shops.filter(s => favIds.includes(s.id));
+
+      compareGrid.innerHTML = '';
+      selected.forEach(s => {
+        const card = document.createElement('div');
+        card.className = 'card grid-card';
+        card.innerHTML = `
+          <div class="card-body">
+            <h4 class="card-title">${s.name}</h4>
+            <p class="card-text">
+              <strong>Type:</strong> ${s.type}<br>
+              <strong>Services:</strong> ${s.services.join(', ')}<br>
+              <strong>Price:</strong> ${s.priceRange}<br>
+              <strong>Rating:</strong> ⭐ ${s.rating}<br>
+              <strong>Discount:</strong> ${s.discount || '—'}<br>
+              <strong>Contact:</strong> ${s.contacts}
+            </p>
+          </div>
+          <div class="card-footer">
+            <button class="btn small danger" onclick="removeOne(${s.id})">Remove</button>
+            <button class="btn small primary" onclick="zoomTo(${s.coords.lat}, ${s.coords.lng})">View on Map</button>
+          </div>
+        `;
+        compareGrid.appendChild(card);
+      });
+    }
+
+    function removeOne(id) {
+      let favs = JSON.parse(localStorage.getItem('kc_favs') || '[]');
+      favs = favs.map(String).filter(x => x !== String(id));
+      localStorage.setItem('kc_favs', JSON.stringify(favs));
+      loadCompare();
+    }
+
+    document.getElementById('clearCompare').addEventListener('click', () => {
+      if (!confirm('Clear all favorites?')) return;
+      localStorage.removeItem('kc_favs');
+      loadCompare();
+    });
+
+    function zoomTo(lat, lng) {
+      const url = `index.html?lat=${lat}&lng=${lng}&z=18`;
+      window.open(url, '_blank');
+    }
+
+    loadCompare();
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout - Trim & Glow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="centered">
+  <div class="card text-center">
+    <h2 class="card-title">Logging Out...</h2>
+    <p class="muted">Please wait, you will be redirected shortly.</p>
+  </div>
+
+  <script>
+    // clear user session
+    localStorage.removeItem("kc_user");
+    localStorage.removeItem("kc_logged_in");
+    setTimeout(() => {
+      location.href = "login.html";
+    },); 
+  </script>
+</body>
+</html>

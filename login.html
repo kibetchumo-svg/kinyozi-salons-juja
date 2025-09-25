@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Trim & Glow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="centered">
+  <div class="card">
+    <h2 class="card-title">Login</h2>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password">
+    </div>
+
+    <button id="loginBtn" class="btn primary full">Login</button>
+
+    <p class="small-text">
+      No account? <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      const e = document.getElementById("email").value.trim();
+      const p = document.getElementById("password").value;
+
+      const saved = JSON.parse(localStorage.getItem("kc_user"));
+      if (!saved) return alert("No account found. Please sign up.");
+
+      if (e === saved.email && p === saved.password) {
+        localStorage.setItem("kc_logged_in", "true");
+        alert("Login successful!");
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid credentials.");
+      }
+    });
+  </script>
+</body>
+</html>

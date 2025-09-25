@@ -1,0 +1,377 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "demo",
+      "email": "demo@student.ac.ke",
+      "password": "demo123"
+    },
+    {
+      "id": "84f3",
+      "username": "juja",
+      "email": "obagi23@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "shops": [
+    {
+      "id": "1",
+      "type": "barber",
+      "name": "Rasta Barber",
+      "services": [
+        "Haircut",
+        "Fade",
+        "Dreadlocks"
+      ],
+      "priceRange": "150 - 400 KES",
+      "rating": 4.2,
+      "discount": "10% for students",
+      "contacts": "+254700111222",
+      "coords": {
+        "lat": -1.1025032,
+        "lng": 37.014033
+      }
+    },
+    {
+      "id": "2",
+      "type": "salon",
+      "name": "Beauty Palor Salon",
+      "services": [
+        "Braids",
+        "Weaves",
+        "Makeup"
+      ],
+      "priceRange": "300 - 1500 KES",
+      "rating": 4.5,
+      "discount": "Free hair treatment Tue",
+      "contacts": "+254700222333",
+      "coords": {
+        "lat": -1.1027185,
+        "lng": 37.014183
+      }
+    },
+    {
+      "id": "3",
+      "type": "barber",
+      "name": "Pato Cuts Kinyozi",
+      "services": [
+        "Haircut",
+        "Line Up",
+        "Beard Trim"
+      ],
+      "priceRange": "100 - 250 KES",
+      "rating": 4,
+      "discount": null,
+      "contacts": "+254700333444",
+      "coords": {
+        "lat": -1.1015013,
+        "lng": 37.0080364
+      }
+    },
+    {
+      "id": "4",
+      "type": "barber",
+      "name": "Juja Fresh Fades",
+      "services": [
+        "Fade",
+        "Shave",
+        "Beard Care"
+      ],
+      "priceRange": "150 - 350 KES",
+      "rating": 4.3,
+      "discount": "20% on Wednesdays",
+      "contacts": "+254700444555",
+      "coords": {
+        "lat": -1.1013247,
+        "lng": 37.0076958
+      }
+    },
+    {
+      "id": "5",
+      "type": "barber",
+      "name": "Fade Masters Juja",
+      "services": [
+        "Fade",
+        "Mohawk",
+        "Hair Dye"
+      ],
+      "priceRange": "250 - 600 KES",
+      "rating": 4.6,
+      "discount": null,
+      "contacts": "+254700555666",
+      "coords": {
+        "lat": -1.098786,
+        "lng": 37.0115106
+      }
+    },
+    {
+      "id": "6",
+      "type": "barber",
+      "name": "Razor Kings",
+      "services": [
+        "Classic Cut",
+        "Beard Trim"
+      ],
+      "priceRange": "200 - 450 KES",
+      "rating": 4.1,
+      "discount": "Free beard trim Fri",
+      "contacts": "+254700666777",
+      "coords": {
+        "lat": -1.0992436,
+        "lng": 37.0106515
+      }
+    },
+    {
+      "id": "7",
+      "type": "salon",
+      "name": "Mama Rembo Salon",
+      "services": [
+        "Braids",
+        "Cornrows",
+        "Facials"
+      ],
+      "priceRange": "300 - 1200 KES",
+      "rating": 4.7,
+      "discount": "Free facial with braids",
+      "contacts": "+254700777888",
+      "coords": {
+        "lat": -1.1000621,
+        "lng": 37.011543
+      }
+    },
+    {
+      "id": "8",
+      "type": "salon",
+      "name": "Juja Beauty Hub",
+      "services": [
+        "Weaves",
+        "Braids",
+        "Nails"
+      ],
+      "priceRange": "400 - 2000 KES",
+      "rating": 4.4,
+      "discount": "15% off weekends",
+      "contacts": "+254700888999",
+      "coords": {
+        "lat": -1.1006522,
+        "lng": 37.0126698
+      }
+    },
+    {
+      "id": "9",
+      "type": "salon",
+      "name": "Bella Hair & Beauty",
+      "services": [
+        "Braids",
+        "Hair Dye",
+        "Makeup"
+      ],
+      "priceRange": "500 - 2500 KES",
+      "rating": 4.6,
+      "discount": null,
+      "contacts": "+254701000111",
+      "coords": {
+        "lat": -1.0997843,
+        "lng": 37.0084828
+      }
+    },
+    {
+      "id": "10",
+      "type": "barber",
+      "name": "Elegant Looks Barbershop",
+      "services": [
+        "Classic Cut",
+        "Fade",
+        "Kids Cut"
+      ],
+      "priceRange": "150 - 350 KES",
+      "rating": 4.2,
+      "discount": "Free kids cut Sat",
+      "contacts": "+254701111222",
+      "coords": {
+        "lat": -1.1013904,
+        "lng": 37.0147634
+      }
+    },
+    {
+      "id": "11",
+      "type": "barber",
+      "name": "Groom N’ Flex",
+      "services": [
+        "Haircut",
+        "Massage",
+        "Beard Care"
+      ],
+      "priceRange": "300 - 700 KES",
+      "rating": 4.5,
+      "discount": null,
+      "contacts": "+254701222333",
+      "coords": {
+        "lat": -1.1007926,
+        "lng": 37.0151647
+      }
+    },
+    {
+      "id": "12",
+      "type": "salon",
+      "name": "Glow Diva Salon",
+      "services": [
+        "Makeup",
+        "Braids",
+        "Weaves"
+      ],
+      "priceRange": "600 - 3000 KES",
+      "rating": 4.8,
+      "discount": "10% student discount",
+      "contacts": "+254701333444",
+      "coords": {
+        "lat": -1.104,
+        "lng": 37.012
+      }
+    },
+    {
+      "id": "13",
+      "type": "barber",
+      "name": "Campus Gents Kinyozi",
+      "services": [
+        "Fade",
+        "Mohawk",
+        "Classic Cut"
+      ],
+      "priceRange": "100 - 250 KES",
+      "rating": 3.9,
+      "discount": null,
+      "contacts": "+254701444555",
+      "coords": {
+        "lat": -1.103,
+        "lng": 37.015
+      }
+    },
+    {
+      "id": "14",
+      "type": "salon",
+      "name": "Pink Touch Salon",
+      "services": [
+        "Braids",
+        "Nails",
+        "Facials"
+      ],
+      "priceRange": "400 - 1800 KES",
+      "rating": 4.3,
+      "discount": null,
+      "contacts": "+254701555666",
+      "coords": {
+        "lat": -1.106,
+        "lng": 37.011
+      }
+    },
+    {
+      "id": "15",
+      "type": "barber",
+      "name": "Sharp Cuts",
+      "services": [
+        "Line Up",
+        "Shave",
+        "Kids Cut"
+      ],
+      "priceRange": "150 - 400 KES",
+      "rating": 4.1,
+      "discount": "Buy 2 get 1 free",
+      "contacts": "+254701666777",
+      "coords": {
+        "lat": -1.107,
+        "lng": 37.009
+      }
+    },
+    {
+      "id": "16",
+      "type": "salon",
+      "name": "Royal Glam Salon",
+      "services": [
+        "Braids",
+        "Weaves",
+        "Makeup"
+      ],
+      "priceRange": "500 - 2500 KES",
+      "rating": 4.6,
+      "discount": "20% Mondays",
+      "contacts": "+254701777888",
+      "coords": {
+        "lat": -1.105,
+        "lng": 37.017
+      }
+    },
+    {
+      "id": "17",
+      "type": "barber",
+      "name": "Clean Shave Hub",
+      "services": [
+        "Shave",
+        "Beard Trim",
+        "Massage"
+      ],
+      "priceRange": "200 - 600 KES",
+      "rating": 4.5,
+      "discount": null,
+      "contacts": "+254701888999",
+      "coords": {
+        "lat": -1.109,
+        "lng": 37.013
+      }
+    },
+    {
+      "id": "18",
+      "type": "salon",
+      "name": "Chic Queens Salon",
+      "services": [
+        "Braids",
+        "Makeup",
+        "Pedicure"
+      ],
+      "priceRange": "400 - 2200 KES",
+      "rating": 4.4,
+      "discount": "Student offer Fri",
+      "contacts": "+254701999000",
+      "coords": {
+        "lat": -1.108,
+        "lng": 37.016
+      }
+    },
+    {
+      "id": "19",
+      "type": "barber",
+      "name": "Pro Fades Juja",
+      "services": [
+        "Fade",
+        "Hair Dye",
+        "Classic Cut"
+      ],
+      "priceRange": "250 - 550 KES",
+      "rating": 4.3,
+      "discount": "Free dye Sat",
+      "contacts": "+254702000111",
+      "coords": {
+        "lat": -1.111,
+        "lng": 37.014
+      }
+    },
+    {
+      "id": "20",
+      "type": "salon",
+      "name": "Style Sisters",
+      "services": [
+        "Braids",
+        "Weaves",
+        "Nails"
+      ],
+      "priceRange": "300 - 1500 KES",
+      "rating": 4.7,
+      "discount": null,
+      "contacts": "+254702111222",
+      "coords": {
+        "lat": -1.11,
+        "lng": 37.018
+      }
+    }
+  ]
+}

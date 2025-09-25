@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Trim & Glow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="centered">
+  <div class="card">
+    <h2 class="card-title">Sign Up</h2>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="e.g. ousmane1">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="wajakoya456@gmail.com">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password">
+    </div>
+
+    <button id="signupBtn" class="btn primary full">Sign Up</button>
+
+    <p class="small-text muted">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script>
+    document.getElementById('signupBtn').addEventListener('click', () => {
+      const u = document.getElementById('username').value.trim();
+      const e = document.getElementById('email').value.trim();
+      const p = document.getElementById('password').value;
+      if (!u || !e || !p) return alert('Please fill all fields.');
+
+      // store basic user locally
+      localStorage.setItem('kc_user', JSON.stringify({ username: u, email: e, password: p }));
+      alert('Signed up. You can now log in.');
+      location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
